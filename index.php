@@ -19,12 +19,12 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 // SQLight Driver
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-        'driver'   => 'pdo_sqlite',
-        'path'     => __DIR__.'/app.db',
-    ),
-));
+//$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+//    'db.options' => array(
+//        'driver'   => 'pdo_sqlite',
+//        'path'     => __DIR__.'/app.db',
+//    ),
+//));
 
 // Sessions
 $app->register(new Silex\Provider\SessionServiceProvider());
@@ -64,6 +64,19 @@ $app->get('/choosecategories', function() use ($app){
     ));
 
 })->bind("choosecategories");
+
+$app->get("/play", function() use($app){
+    return $app['twig']->render('play.twig', array(
+        'photos' => $app['session']->get('photos'),
+        'city' => $app['session']->get('city')
+    ));
+})->bind("playgame");
+
+$app->post('/savepictures', function() use ($app){
+    $photos = $app['request']->get('photos');
+    $app['session']->set('photos', $photos);
+    return $app->redirect($app["url_generator"]->generate("playgame"));
+});
 
 $app->get('/getdata/{city}', function($city) use($app){
     $city = urlencode($city); // Make names with spaces suitable to be URL arguments

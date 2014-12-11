@@ -1,0 +1,18 @@
+{% include 'base.twig' %}
+{%  block pagecontent %}
+    <div class="game">
+        <ul class="dropzones">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <ul class="draggable">
+            {% for photo in photos %}
+                <li>
+                    <img src="{{ photo }}" />
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
