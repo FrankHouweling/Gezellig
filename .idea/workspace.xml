@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418291496336" ignored="false" />
     <file path="/index.php" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418304860674" ignored="false" />
-    <file path="/README.md" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418306169674" ignored="false" />
+    <file path="/README.md" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418306330281" ignored="false" />
     <file path="/base.twig" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418296141591" ignored="false" />
     <file path="/welcome.twig" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418305542957" ignored="false" />
     <file path="/select-categories.twig" changelist="0b1eb6b6-b7a0-4d14-b6c6-4e687df3e989" time="1418305374139" ignored="false" />
@@ -84,7 +84,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="69" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2214533">
+            <state line="4" column="176" selection-start="244" selection-end="244" vertical-scroll-proportion="0.11072665">
               <folding />
             </state>
           </provider>
@@ -441,7 +441,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="69" selection-start="280" selection-end="280" vertical-scroll-proportion="0.2214533">
+        <state line="4" column="176" selection-start="244" selection-end="244" vertical-scroll-proportion="0.11072665">
           <folding />
         </state>
       </provider>
