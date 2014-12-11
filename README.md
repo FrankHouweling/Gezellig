@@ -6,7 +6,7 @@ The most smart and gezellig repository arround
 Installation
 -------
 This project uses a dependency manager. To install, clone the git repository, install composer and run "composer install".
-This project uses a SQLight database, and should thus not need any migrations.
+After composer install, chmod the data directory to make it writable.
 
 Update
 -------
