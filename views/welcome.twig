@@ -1,0 +1,16 @@
+{% include 'base.twig' %}
+{%  block pagecontent %}
+    <div class="largeform">
+        <h2>Waar bent u opgegroeid?</h2>
+        <form method="post" action="savecity">
+            <select name="city">
+                {% for gemeente in gemeenten %}
+                    <option value="{{ gemeente }}">
+                        {{ gemeente }}
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Volgende" />
+        </form>
+    </div>
+{% endblock %}
