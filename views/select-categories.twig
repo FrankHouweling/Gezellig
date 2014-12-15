@@ -1,10 +1,10 @@
 {% include 'base.twig' %}
 {%  block pagecontent %}
     <div class="select-categories" data-city="{{ city }}">
-        <h2>Selecteer hieronder relevante foto's:</h2>
+        <h2>Voor de begeleider: Klik op leuke foto's om te bespreken</h2>
         <p>
-            Welke van de foto's hieronder zijn leuk om samen te bespreken?
-            <br />Tip: zorg dat de foto's over niet meer dan 3 onderwerpen gaan.
+            Welke van de foto's hieronder zijn leuk om samen over te praten?
+            <br />Tip: zorg dat de foto's over niet meer dan 3 onderwerpen gaan. Selecteer maximaal 10 foto's.
         </p>
         <div class="loading">
             <p>
@@ -13,7 +13,18 @@
         </div>
         <form method="post" action="savepictures" class="resultsform hidden">
             <ul class="results"></ul>
-            <input type="submit" value="Volgende" />
+            <br />
+
+            <div class="end">
+                <p>
+                    Wanneer u foto's geselecteerd heeft kunt u op "Starten" klikken
+                    om de foto's met uw gesprekspartner te bespreken.<br />
+                    U kunt vrij door de foto's bladeren, aantekeningen maken of de foto's
+                    sorteren in de drie stapels.
+                </p>
+
+                <input type="submit" value="Starten" />
+            </div>
         </form>
     </div>
 {% endblock %}

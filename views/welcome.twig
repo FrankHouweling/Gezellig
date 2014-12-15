@@ -4,13 +4,14 @@
         <h1>Gezellig: Bespreek samen foto's van vroeger!</h1>
         <p>
             Het bespreken van oude foto's is een leuke activiteit voor een dementerende en een
-            begeleider. Selecteer hieronder de plaats waar uw medespeler opgegroeid is, en we kunnen direct beginnen.
+            begeleider. U, de begeleider, kiest in twee stappen de juiste foto's uit, en daarna kunnen we direct beginnen.
         </p>
     </div>
+    <img src="web/header.jpg" class="headerimg" />
     <div class="largeform">
-        <h2>Waar bent u opgegroeid?</h2>
+        <h2>Voor de begeleider: Waar is uw gesprekspartner opgegroeid?</h2>
         <form method="post" action="savecity">
-            <select name="city">
+            <select name="city" class="introselect">
                 {% for gemeente in gemeenten %}
                     <option value="{{ gemeente }}">
                         {{ gemeente }}

@@ -42,14 +42,19 @@ $(document).ready(function(){
                 $('.draggable li').each(function() {
                     // Find the current z-index value
                     var z = parseInt( $( this ).css( "z-index" ), 10 );
+
+                    $(this).find('.overlay').css('opacity', 0.7);
+                    $(el).css('max-width', 400);
+
                     // Keep either the current max, or the current z-index, whichever is higher
                     max = Math.max( max, z );
                 });
 
+                $(el).find('.overlay').css('opacity', 0);
                 $(el).css('z-index', max+1);
 
                 if( $(el).css('-webkit-transform') == 'none' ){
-                    $(el).find('img').animate({
+                    $(el).animate({
                         'max-width' : 650
                     });
 
@@ -65,18 +70,30 @@ $(document).ready(function(){
             },
             stop : function(event, ui){
                 $(this).css('-webkit-transform', 'none');
-                $(this).find('img').animate({
-                    'max-width' : 400
+                $(this).animate({
+                    'max-width' : 500
                 });
             }
         });
 
         $( ".dropzones li" ).droppable({
             drop: function( event, ui ) {
-                $( this )
-                    .html( "Dropped!" );
-
                 jQuery(ui.draggable).detach().appendTo($(this));
+
+                if( $('.draggable li').length == 0 ){
+                    $('<div><p>Dankuwel voor het meespelen!</p></div>').dialog({
+                        title : "U heeft alle foto's gesorteerd!",
+                        width : 750,
+                        buttons : [
+                            {
+                                text : "Nogmaals spelen",
+                                click : function(){
+                                    window.open('http://localhost:8888/Gezellig/', '_self');
+                                }
+                            }
+                        ]
+                    });
+                }
             }
         });
 

@@ -10,7 +10,9 @@
         <ul class="draggable">
             {% for photo in photos %}
                 <li>
+                    <div class="overlay"></div>
                     <img src="{{ photo }}" />
+                    <input type="text" />
                 </li>
             {% endfor %}
         </ul>
